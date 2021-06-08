@@ -1,8 +1,8 @@
 package com.fkey.hstorage.repository;
 
-import com.fkey.hstorage.entity.AddProduct;
+import com.fkey.hstorage.entity.AddProductNode;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface AddProductsRepository extends MongoRepository<AddProduct, String> {
+public interface AddProductsRepository extends MongoRepository<AddProductNode, String> {
 
 }
