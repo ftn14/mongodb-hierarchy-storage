@@ -20,7 +20,8 @@ public class AddProductsService {
 				;
 	}
 
-	public List<Node> getAddProductsByTreeId(int treeId) {
-		return repository.findByTreeId(treeId).orElse(Collections.emptyList());
+	public List<Node> getAddProductsByTreeId(int treeId, int startLvl) {
+		return repository.findByTreeIdAndLevelGreaterThanEqual(treeId, startLvl)
+				.orElse(Collections.emptyList());
 	}
 }

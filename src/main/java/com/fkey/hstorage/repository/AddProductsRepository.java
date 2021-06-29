@@ -11,5 +11,5 @@ import java.util.Optional;
 public interface AddProductsRepository extends MongoRepository<Node, String> {
 
 	// Optional<List<Node>> findDistinctByClassCode(String classCode);
-	Optional<List<Node>> findByTreeId(int treeId);
+	Optional<List<Node>> findByTreeIdAndLevelGreaterThanEqual(int treeId, int level);
 }
